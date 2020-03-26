@@ -1,0 +1,32 @@
+@import "../../styles/variables.scss";
+
+.selection-item {
+  border: 1px solid $color-grey;
+  font-size: 13px;
+  font-weight: 700;
+  color: $color-grey;
+  border-right: none;
+  width: 100%;
+  display: flex;
+  cursor: pointer;
+  .item-label {
+    text-align: center;
+    padding: 10px 5px;
+    transition: all 0.3s;
+    width: 100%;
+  }
+  .item-image {
+    max-width: 100%;
+  }
+  &:last-child {
+    border-right: 1px solid $color-grey;
+  }
+  .selection-button {
+    display: none;
+    &:checked + .item-label {
+      background-color: $color-grey;
+      color: $color-white;
+      cursor: default;
+    }
+  }
+}

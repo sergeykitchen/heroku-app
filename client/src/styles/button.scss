@@ -1,0 +1,51 @@
+.btn,
+a.btn {
+  color: $color-black;
+  border: none;
+  padding: 17px 5px;
+  text-align: center;
+  text-shadow: 0 1px 1px $color-white;
+  min-width: 150px;
+  background-color: $color-yellow;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline !important;
+  }
+  &:focus {
+    outline: none;
+  }
+  &:active {
+    background: $color-yellow-active;
+  }
+}
+
+a.btn {
+  text-decoration: none;
+}
+
+.button-container {
+  margin: 20px auto;
+  display: flex;
+  .btn {
+    display: block;
+  }
+
+  &.to-end {
+    justify-content: flex-end;
+  }
+  &.space-between {
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: $small-width) {
+  .btn,
+  a.btn {
+    font-size: 11px;
+    padding: 14px 5px;
+  }
+}

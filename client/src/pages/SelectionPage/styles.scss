@@ -1,0 +1,17 @@
+@import "../../styles/variables.scss";
+
+.selection-form {
+  fieldset {
+    .fieldset-label {
+      color: $color-grey;
+      font-size: 30px;
+      font-weight: lighter;
+    }
+  }
+
+  .selection-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px auto;
+  }
+}
