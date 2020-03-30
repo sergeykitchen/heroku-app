@@ -20,7 +20,7 @@ export const EmailPage = () => {
       ) : (
         <form onSubmit={sendEmail}>
           <InputField
-            required
+            // required
             placeholder="Email"
             label="Email"
             type="email"

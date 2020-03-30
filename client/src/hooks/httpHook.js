@@ -1,10 +1,10 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import history from "../history";
 
 export const useHttp = () => {
   const [loading, setLoading] = useState(false);
 
-  const request = (url, method, test, next) => {
+  const request = useCallback((url, method, test, next) => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
@@ -14,7 +14,7 @@ export const useHttp = () => {
         history.push("/live_chat");
       }
     }, 1500);
-  };
+  }, []);
 
   return { request, loading };
 };
